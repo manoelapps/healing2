@@ -2,4 +2,3 @@
 Django==4.1.2
 sqlparse==0.4.4
 tzdata==2024.1
-Python==3.12.3
