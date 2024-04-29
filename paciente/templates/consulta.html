@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block 'head' %}
+
+    <link rel="stylesheet" href="{% static 'medicos/css/abrir_horario.css' %}">
+    <link rel="stylesheet" href="{% static 'usuarAvaliacoes, Documentos/css/usuarios.css' %}">
+    <link rel="stylesheet" href="{% static 'medicos/css/cadastro_medico.css' %}">
+    <link rel="stylesheet" href="{% static 'pacientes/css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'pacientes/css/agendar_horario.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+{% endblock 'head' %}
+
+{% block 'body' %}
+    {% include "partials/navbar.html" %}
+
+    <br><br>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-3"><img src="{{dado_medico.foto.url}}" class="foto-perfil-card-lg" alt=""></div>
+                    <div class="col-md">
+                        <p style="font-size: 20px" class="p-bold">Dr(a). {{dado_medico.nome}} <i class="bi bi-patch-check-fill icon-main"></i></p>
+                        <p>{{dado_medico.descricao}}</p>
+                        <p class="p-bold">{{consulta.data_aberta.data}}</p>
+                        
+                        {% if consulta.status == 'A' %}
+                            <a href="{% url 'cancelar_consulta' consulta.id %}" class="btn btn-danger btn-lg" >Cancelar Consulta X</a>
+                        {% endif %}
+                        {% if consulta.status == 'C' %}
+                            <div class="alert alert-danger" role="alert">
+                                Consulta Cancelada
+                            </div>
+                        {% elif consulta.status == 'F' %}
+                            <div class="alert alert-success" role="alert">
+                                Consulta Finalizada
+                            </div>
+                        {% elif consulta.status == 'I' %}
+                            <div class="alert alert-primary" role="alert">
+                                Consulta inicializada, acesse o link imediatamente!
+                            </div>
+                        {% endif %}
+                    </div>
+                </div> 
+                <hr>
+                <br>
+                <div class="row">
+                    <div class="col-md">
+                        
+                        <p><i class="color-dark bi bi-check-circle-fill"></i> Consulta agendada</p>
+                    </div>
+                    <div class="col-md">
+                        <p><i class=" {% if consulta.status == 'F' or consulta.status == 'S' %}color-dark{% endif %} bi bi-check-circle-fill"></i> Consulta realizada</p>
+                    </div>
+                    <div class="col-md">
+                        <p><i class=" {% if consulta.status == 'S' %}color-dark{% endif %} bi bi-check-circle-fill"></i> Consulta Avaliada</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md">
+                        <h3 class="p-bold">Detalhes da consulta</h3>
+                        <p style="font-size:20px"><i class="bi bi-calendar3 color-dark"></i>&nbsp {{consulta.data_aberta.data}}</p>
+                        <p style="font-size:20px"><i class="bi bi-tag-fill color-dark"></i></i>&nbsp R$ {{dado_medico.valor_consulta}}</p>
+                        <a style="cursor: auto;" class="btn btn-dark-color-outline btn-lg">Adicione em seu calendário!</a>
+                    </div>
+                    <br>
+                    {% if consulta.status == 'S'%}
+                            {% for avaliacao in avaliacoes %}
+                                <div class="col-md">
+                                    <h3 class="p-bold">Avaliação da consulta</h3>
+                                    <p> {%if avaliacao.avaliacao == 5 %}
+                                            <div class="rating">
+                                                <p>  <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i>  <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> </p><p>Excelente:  </p>   
+                                            </div>
+                                        {% elif avaliacao.avaliacao == 4 %}
+                                            <div class="rating">
+                                                <p>  <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i>  <i class="bi bi-star-fill"></i> <i class="bi bi-star"></i> </i> </p><p>Bom:  </p>
+                                            </div>
+                                        {% elif avaliacao.avaliacao == 3 %}
+                                            <div class="rating">
+                                               <p> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> </i> </p><p>Regular:  </p>
+                                            </div>
+                                        {% elif avaliacao.avaliacao == 2 %}
+                                            <div class="rating">
+                                                <p>  <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> </i> </p><p>Ruim:  </p>
+                                            </div>
+                                        {% elif avaliacao.avaliacao == 1 %}
+                                            <div class="rating">
+                                                <p>  <i class="bi bi-star-fill"> </i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> </i> </p><p>Muito Ruim:  </p> 
+                                            </div>
+                                        {% endif %}
+                                    </p>
+                                    <p>{{avaliacao.comentario}}</p>
+                                </div>
+                            {%  endfor %}
+                    {% else%}
+                        <div class="col-md">
+                            <form action="{% url 'avaliacao_consulta' consulta.id %}" method="post">{% csrf_token %}
+                                <label for="avaliacao">Avaliação:</label><br>
+                                <div class="rating">
+                                <input type="radio" id="star5" name="avaliacao" value="5">
+                                <label for="star5" title="Excelente"></label>
+                                <input type="radio" id="star4" name="avaliacao" value="4">
+                                <label for="star4" title="Bom"></label>
+                                <input type="radio" id="star3" name="avaliacao" value="3">
+                                <label for="star3" title="Regular"></label>
+                                <input type="radio" id="star2" name="avaliacao" value="2">
+                                <label for="star2" title="Ruim"></label>
+                                <input type="radio" id="star1" name="avaliacao" value="1">
+                                <label for="star1" title="Muito Ruim"></label>
+                                </div>
+                                <br>
+                                <label for="comentario">Comentário:</label><br>
+                                <textarea id="comentario" name="comentario" rows="3" cols="50"></textarea>
+                                <br>
+                                {% if consulta.status == 'F' %}
+                                    <input type="submit" class="btn btn-success btn-dark-color btn-lg" value="Enviar Avaliação">
+                                {% elif consulta.status != 'F' %}
+                                    <input type="submit" disabled class="btn btn-success btn-dark-color btn-lg" value="Enviar Avaliação">
+                                {% endif %}
+                            </form>
+                        </div>
+                    {% endif %}
+                </div>
+                <hr>
+                <h3 class="p-bold">Como acessar ?</h3>
+                <p>No horário da consulta acesse o link disponível abaixo</p>
+
+                
+                {% if consulta.status == 'I' and consulta.link %}
+                    <a href="{{consulta.link}}" target="_blank" class="btn btn-success btn-dark-color btn-lg" >Acessar consulta</a>
+                {% else %}
+
+                    <a href="{{consulta.link}}"  class="btn btn-success btn-dark-color btn-lg disabled" >Acessar consulta</a>
+
+                {% endif %}
+                
+                <hr>
+                <h3 class="p-bold">Meus documentos</h3>
+                <br>
+                {% for documento in documentos%}
+                    <a href="{{documento.documento.url}}" target="_blank" class="link documentos"><i class="bi bi-file-arrow-down"></i> {{documento.titulo}} - {{documento.consulta.data_aberta.data.year}}</a>
+                {% endfor %}
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div class="col-md"></div>
+        </div>
+        
+    </div>
+
+{% endblock 'body' %}

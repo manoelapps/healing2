@@ -1,0 +1,569 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+<TITLE>Leiame do Microsoft .NET Framework 4.htm</TITLE><style type="text/css"> UL.toc, OL.toc { list-style: none; font-family: arial } UL, OL { font-family: arial } LI.tocline1 { font-weight: bold; font-family: arial } LI.tocline2 { font-weight: normal; font-family: arial; text-indent: 2em; }LI.tocline3 { font-weight: normal; font-family: arial; text-indent: 4em; }P { font-size: 0.8em; font-family: arial }H1, H2, H3, H4, span, LI { font-family: arial }</style></HEAD>
+<BODY>
+<H1>
+Leiame do Microsoft .NET Framework 4
+</H1>
+<P>Para exibir a versão mais recente do Leiame, clique <a href="http://go.microsoft.com/fwlink/?LinkID=186763">aqui</a>.</P>
+<UL class="toc">
+<li class="tocline1">1. <A href="#System Requirements">Requisitos do sistema</A></li>
+<li class="tocline2">1.1. <A href="#Supported Architectures">Arquiteturas com suporte</A></li>
+<li class="tocline2">1.2. <A href="#Supported Operating Systems">Sistemas operacionais com suporte</A></li>
+<li class="tocline2">1.3. <A href="#Hardware Requirements">Requisitos de hardware</A></li>
+<li class="tocline2">1.4. <A href="#Other System Requirements">Outros requisitos do sistema</A></li>
+<li class="tocline1">2. <A href="#Known Issues">Problemas conhecidos</A></li>
+<li class="tocline2">2.1. <A href="#Installation">Instalação</A></li>
+<li class="tocline3">2.1.1. <A href="#Full Framework (Install)">.NET Framework Full (Instalação)</A></li>
+<li class="tocline3">2.1.2. <A href="#Client Profile (Install)">Client Profile (Instalação)</A></li>
+<li class="tocline2">2.2. <A href="#Uninstallation">Desinstalação</A></li>
+<li class="tocline3">2.2.1. <A href="#Full Framework (Uninstall)">.NET Framework Full (Desinstalação)</A></li>
+<li class="tocline3">2.2.2. <A href="#Client Profile (Uninstall)">Client Profile (Desinstalação)</A></li>
+<li class="tocline2">2.3. <A href="#Product Issues">Problemas do produto</A></li>
+<li class="tocline3">2.3.1. <A href="#General Issues">Assuntos gerais</A></li>
+<li class="tocline3">2.3.2. <A href="#ASP.NET">ASP.NET</A></li>
+<li class="tocline3">2.3.3. <A href="#Winforms">Winforms</A></li>
+<li class="tocline3">2.3.4. <A href="#Parallel Programming">Programação paralela</A></li>
+<li class="tocline3">2.3.5. <A href="#Managed Extensibility Framework">Managed Extensibility Framework</A></li>
+<li class="tocline3">2.3.6. <A href="#Entity Framework">Entity Framework</A></li>
+<li class="tocline3">2.3.7. <A href="#LINQ to SQL">LINQ to SQL</A></li>
+<li class="tocline3">2.3.8. <A href="#Windows Communication Foundation (WCF)">Windows Communication Foundation (WCF)</A></li>
+<li class="tocline3">2.3.9. <A href="#Windows Presentation Foundation (WPF)">Windows Presentation Foundation (WPF)</A></li>
+<li class="tocline3">2.3.10. <A href="#Windows Workflow Foundation (WF)">Windows Workflow Foundation (WF)</A></li>
+<li class="tocline3">2.3.11. <A href="#Client Profile (Product)">Client Profile (Produto)</A></li>
+<li class="tocline1">3. <A href="#Related Links">Links relacionados</A></li>
+</UL>
+<H2>
+1. <A name="System Requirements">Requisitos do sistema</A>
+</H2>
+<h3><b> 1.1 <A name="Supported Architectures">Arquiteturas com suporte</A></b></h3>
+    <ul style="font-size: small">
+        <li>x86</li>
+        <li>x64</li>
+        <li>ia64 (não há suporte para alguns recursos em ia64, por exemplo, o Windows Presentation Foundation (WPF))</li>
+    </ul>
+<h3><b>1.2 <A name="Supported Operating Systems">Sistemas operacionais com suporte</A></b></h3>
+    <ul style="font-size: small">
+        <li>Windows XP SP3</li>
+        <li>Windows Server 2003 SP2</li>
+        <li>Windows Vista SP1</li>
+        <li>Windows 7</li>
+        <li>Windows Server 2008 (<span>sem suporte na função Server Core</span>)</li>
+        <li>Windows Server 2008 R2 (<span>sem suporte na função Server Core</span>)</li>
+    </ul>
+<h3><b>1.3 <A name="Hardware Requirements">Requisitos de hardware</A></b></h3>
+    <ul style="font-size: small">
+        <li>Espaço mínimo disponível em disco rígido:
+            <ul style="font-size: small">
+                <li>x86: 850 MB</li>
+                <li>x64: 2 GB</li>
+            </ul>
+        </li>
+        <li>Processador e RAM:
+            <ul style="font-size: small">
+                <li>Mínimo: Pentium 1 GHz com 512 MB de RAM</li>
+            </ul>
+        </li>
+    </ul>
+<h3><b>1.4 <A name="Other System Requirements">Outros requisitos do sistema</A></b></h3>
+    <ul style="font-size: small">
+        <li><a href="http://www.microsoft.com/downloads/details.aspx?familyid=889482fc-5f56-4a38-b838-de776fd4138c&displaylang=en">Windows Installer 3.1</a></li>
+        <li><a href="http://www.microsoft.com/windows/downloads/ie/getitnow.mspx">Internet Explorer 5.01</a></li>
+    </ul>
+<H2>
+2. <A name="Known Issues">Problemas conhecidos</A>
+</H2>
+<H3>
+2.1 <A name="Installation">Instalação</A>
+</H3>
+<H4>
+2.1.1 <A name="Full Framework (Install)">.NET Framework Full (Instalação)</A>
+</H4>
+<H4>
+2.1.1.1  Não é possível carregar o tipo 'System.ServiceModel.Activation.HttpModule' depois de modificar o .NET Framework 3.5 com o .NET Framework 4 instalado
+</H4>
+<P>Esse problema pode ser causado pelos seguintes cenários:</P>
+<UL style="FONT-SIZE: small">
+<LI>Desinstalar o .NET Framework 3.5 no Windows 2003 Server e no Windows XP quando o .NET Framework 4&nbsp;está instalado.</LI>
+<LI>Desinstalar a Ativação HTTP do .NET Framework 3.0 WCF quando o .NET Framework 4 está instalado.</LI>
+<LI>Instalar ou reparar o .NET Framework 3.5 quando o .NET Framework 4está instalado.</LI>
+<LI>A versão atual do .NET Framework 4 é instalada quando uma versão de pré-lançamento já foi instalada.</LI></UL>
+<P>O texto completo do erro é o seguinte:</P>
+<P>Não foi possível carregar o tipo 'System.ServiceModel.Activation.HttpModule' do assembly 'System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.</P>
+<P>Descrição: ocorreu uma exceção sem tratamento durante a execução da solicitação da Web atual. Examine o rastreamento de pilha para obter mais informações sobre o erro e onde ele se originou no código.</P>
+<P><U>Para resolver esse problema:</U></P>
+<UL style="FONT-SIZE: small">
+<LI>No prompt de comando, navegue até %windows%\Microsoft.Net\Framework\&lt;versão mais recente&gt;\</LI>
+<LI>Execute o seguinte comando: aspnet_regiis.exe /iru</LI></UL>
+<H4>
+2.1.1.2  A desinstalação do .NET Framework 4 Beta 2 deixa entradas "isapiCgiRestriction" não utilizadas no arquivo applicationHost.config no Windows Vista, no Windows Server 2008 e no Windows 7
+</H4>
+<P>Em um computador com o IIS 7 ou o IIS 7.5 habilitado e o .NET Framework 4 instalado, a desinstalação da versão Beta 2 deixa entradas "isapiCgiRestriction" não utilizadas no arquivo applicationHost.config. Isso ocorre no Windows Vista, no Windows Server 2008 e no Windows 7. As entradas não utilizadas não afetam a funcionalidade do servidor Web. As versões posteriores do .NET Framework 4 podem ser instaladas com segurança no mesmo computador, pois as atualizações subsequentes atualizarão as entradas "isapiCgiRestriction".</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Exclua as entradas "isapiCgiRestriction" não utilizadas do arquivo applicationHost.config. Porém, esta etapa não é obrigatória, pois as entradas deixadas após a desinstalação não afetam a funcionalidade do produto nem a capacidade de instalar versões posteriores.</P>
+<H4>
+2.1.1.3  O .NET Framework 1.0 não pode ser instalado após a instalação do .NET Framework 4
+</H4>
+<P>O .NET Framework 1.0 não pode ser instalado após a instalação do .NET Framework 4.&nbsp; O .NET Framework 1.0 deve ser instalado antes da instalação do .NET Framework 4.</P>
+<P><U>Para resolver esse problema:</U></P>
+<ol style="font-size: small">
+<LI>Vá até o Painel de Controle e abra Programas e Recursos.</LI>
+<LI>Desinstale o .NET Framework 4 Extended.</LI>
+<LI>Desinstale o .NET Framework 4 Client Profile.</LI>
+<LI>Instale o .NET Framework 1.0.</LI>
+<LI>Instale o .NET Framework 4.</LI></OL>
+<H4>
+2.1.1.4  A Instalação do .NET Framework 4 falhou
+</H4>
+<P>A Instalação do .NET Framework 4 falhou.</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Consulte o guia de solução de problemas da Instalação do .NET Framework 4 (<A href="http://go.microsoft.com/fwlink/?LinkId=186690">http://go.microsoft.com/fwlink/?LinkId=186690</A>)</P>
+<H4>
+2.1.1.5  O Serviço de Cache de Fontes do Windows Presentation Foundation (WPF) 4 não é totalmente removido depois que o .NET Framework 4 é desinstalado (.NET Framework Full)
+</H4>
+<P>O Serviço de Cache de Fontes do Windows Presentation Foundation (WPF) 4 não é totalmente removido depois que o .NET Framework 4 é desinstalado (.NET Framework Full).</P>
+<P>Observação: esse problema afeta as versões Full e Client Profile do .NET Framework.</P>
+<P><U>Para resolver esse problema:</U></P>
+<ol style="font-size: small">
+<LI>
+<DIV class=MsoPlainText style="MARGIN: 0in 0in 0pt">Abra uma janela de comando no modo&nbsp;Administrador.</DIV></LI>
+<LI>
+<DIV class=MsoPlainText style="MARGIN: 0in 0in 0pt">Digite&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'sc delete WPFFontCache_v0400'</DIV></LI></OL>
+<P>“[SC] DeleteService SUCCESS” deverá ser exibido.</P>
+<P>Quando você atualizar o console de serviços, o Cache de Fontes deverá aparecer.&nbsp; Se essa atualização não corrigir o problema, reinicie o computador.</P>
+<H4>
+2.1.2 <A name="Client Profile (Install)">Client Profile (Instalação)</A>
+</H4>
+<H4>
+2.1.2.1  O .NET Framework 1.0 não pode ser instalado após a instalação do .NET Framework 4 Client Profile
+</H4>
+<P>O .NET Framework 1.0 não pode ser instalado após a instalação do .NET Framework 4 Client Profile.&nbsp; O .NET Framework 1.0 deve ser instalado antes da instalação do .NET Framework 4 Client Profile.</P>
+<P><U>Para resolver esse problema:</U></P>
+<ol style="font-size: small">
+<LI>Vá até o Painel de Controle e abra Programas e Recursos.</LI>
+<LI>Desinstale o .NET Framework 4 Client Profile.</LI>
+<LI>Instale o .NET Framework 1.0.</LI>
+<LI>Instale o .NET Framework 4 Client Profile.</LI></OL>
+<H4>
+2.1.2.2  O Serviço de Cache de Fontes do Windows Presentation Foundation (WPF) 4 não é totalmente removido depois que o .NET Framework 4 é desinstalado (Client Profile)
+</H4>
+<P>Quando o .NET Framework 4 é desinstalado, o&nbsp;serviço Cache de Fontes do WPF pode não ser totalmente desinstalado.&nbsp; </P>
+<P>Embora o serviço Cache de Fontes do WPF não seja mais utilizável após a desinstalação, a entrada de serviços do “Windows Presentation Foundation Font Cache 4.0.0.0”&nbsp;ainda é exibida no console Serviços. </P>
+<P>No Windows Vista e no Windows Server 2008, o campo “Descrição” do console de serviços&nbsp;informará: “&lt;Falha ao Ler Descrição. Código de Erro: 2 &gt;”.&nbsp; No Windows XP e no Windows Server 2003, o campo “Descrição”&nbsp;ainda exibirá a cadeia de caracteres correta.</P>
+<P>A reinstalação do .NET Framework reparará isso. Nenhum outro efeito é conhecido.</P>
+<P>Observação: esse problema afeta as versões Full e Client Profile do .NET Framework.</P>
+<P><U>Para resolver esse problema:</U></P>
+<ol style="font-size: small">
+<LI>
+<DIV class=MsoPlainText style="MARGIN: 0in 0in 0pt">Abra uma janela de comando no modo&nbsp;Administrador.</DIV></LI>
+<LI>
+<DIV class=MsoPlainText style="MARGIN: 0in 0in 0pt">Digite&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'sc delete WPFFontCache_v0400'</DIV></LI></OL>
+<P>“[SC] DeleteService SUCCESS” deverá ser exibido.</P>
+<P>Quando você atualizar o console de serviços, o Cache de Fontes deverá aparecer.&nbsp; Se essa atualização não corrigir o problema, reinicie o computador.</P>
+<H4>
+2.1.2.3  A Instalação do .NET Framework 4 Client Profile falhou
+</H4>
+<P>A Instalação do .NET Framework 4 Client Profile falhou.</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Consulte o guia de solução de problemas da Instalação do .NET Framework 4 (<A href="http://go.microsoft.com/fwlink/?LinkId=186690">http://go.microsoft.com/fwlink/?LinkId=186690</A>)</P>
+<H3>
+2.2 <A name="Uninstallation">Desinstalação</A>
+</H3>
+<H4>
+2.2.1 <A name="Full Framework (Uninstall)">.NET Framework Full (Desinstalação)</A>
+</H4>
+<H4>
+2.2.1.1  A desinstalação do .NET Framework 4 Beta 2 deixa entradas "isapiCgiRestriction" não utilizadas no arquivo applicationHost.config no Windows Vista, no Windows Server 2008 e no Windows 7
+</H4>
+<P>Em um computador com o IIS 7 ou o IIS 7.5 habilitado e o .NET Framework 4 instalado, a desinstalação da versão Beta 2 deixa entradas "isapiCgiRestriction" não utilizadas no arquivo applicationHost.config. Isso ocorre no Windows Vista, no Windows Server 2008 e no Windows 7. As entradas não utilizadas não afetam a funcionalidade do servidor Web. As versões posteriores do .NET Framework 4 podem ser instaladas com segurança no mesmo computador, pois as atualizações subsequentes atualizarão as entradas "isapiCgiRestriction".</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Exclua as entradas "isapiCgiRestriction" não utilizadas do arquivo applicationHost.config. Porém, esta etapa não é obrigatória, pois as entradas deixadas após a desinstalação não afetam a funcionalidade do produto nem a capacidade de instalar versões posteriores.</P>
+<H4>
+2.2.1.2  O Serviço de Cache de Fontes do WPF 4.0 não é totalmente removido após a desinstalação do .NET Framework 4.0 (Full)
+</H4>
+<P>A solução para remover totalmente esse serviço de Cache de Fontes órfão é a seguinte:</P>
+<ol style="font-size: small">
+<LI>
+<DIV class=MsoPlainText style="MARGIN: 0in 0in 0pt">Abra uma janela de comando no modo&nbsp;Administrador.</DIV></LI>
+<LI>
+<DIV class=MsoPlainText style="MARGIN: 0in 0in 0pt">Digite&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'sc delete WPFFontCache_v0400'</DIV></LI></OL>
+<P>Você deverá ver:&nbsp; “[SC] DeleteService SUCCESS”.</P>
+<P>Se você atualizar o console de serviços, o Cache de Fontes não deverá aparecer agora.&nbsp; Talvez seja necessário reinicializar o computador se a atualização do console de serviços não corrigir o problema. </P>
+<P>(Observação: esse&nbsp;problema corresponde ao .NET Framework Full e é uma&nbsp;cópia do problema 877240&nbsp;do&nbsp;Leiame referente ao&nbsp;Client Profile)</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>A solução para remover totalmente esse serviço de Cache de Fontes órfão é a seguinte:</P>
+<ol style="font-size: small">
+<LI>
+<DIV class=MsoPlainText style="MARGIN: 0in 0in 0pt">Abra uma janela de comando no modo&nbsp;Administrador.</DIV></LI>
+<LI>
+<DIV class=MsoPlainText style="MARGIN: 0in 0in 0pt">Digite&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'sc delete WPFFontCache_v0400'</DIV></LI></OL>
+<P>Você deverá ver:&nbsp; “[SC] DeleteService SUCCESS”.</P>
+<P>Se você atualizar o console de serviços, o Cache de Fontes não deverá aparecer agora.&nbsp; Talvez seja necessário reinicializar o computador se a atualização do console de serviços não corrigir o problema.</P>
+<H4>
+2.2.2 <A name="Client Profile (Uninstall)">Client Profile (Desinstalação)</A>
+</H4>
+<H4>
+2.2.2.1  O Serviço de Cache de Fontes do WPF 4.0 não é totalmente removido após a desinstalação do .NET Framework 4.0 (Client Profile)
+</H4>
+<P>Quando o .NET Framework 4 é desinstalado do sistema operacional Vista/XP/w2k3/W2k8, o&nbsp;serviço de Cache de Fontes do WPF não é totalmente desinstalado.&nbsp; </P>
+<P>Embora o serviço de Cache de Fontes do WPF não seja mais utilizável após a desinstalação, a entrada de serviços do “Windows Presentation Foundation Font Cache 4.0.0.0”&nbsp;ainda permanece visível no console Serviços. </P>
+<P>No Windows Vista e no Windows Server 2008, o campo “Descrição” do console de serviços&nbsp;informará: “&lt;Falha ao Ler Descrição. Código de Erro: 2 &gt;”.&nbsp; No Windows XP/Windows Server 2003, o campo “Descrição”&nbsp;ainda exibirá a cadeia de caracteres correta.</P>
+<P>A reinstalação do .NET Framework reparará isso. Nenhum outro efeito é conhecido.</P>
+<P>Observação: esse problema se refere tanto ao Net4 Client&nbsp;Profile quanto ao NET4 Full</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>A solução para remover totalmente esse serviço de Cache de Fontes órfão é a seguinte:</P>
+<ol style="font-size: small">
+<LI>
+<DIV class=MsoPlainText style="MARGIN: 0in 0in 0pt">Abra uma janela de comando no modo&nbsp;Administrador.</DIV></LI>
+<LI>
+<DIV class=MsoPlainText style="MARGIN: 0in 0in 0pt">Digite&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'sc delete WPFFontCache_v0400'</DIV></LI></OL>
+<P>Você deverá ver:&nbsp; “[SC] DeleteService SUCCESS”.</P>
+<P>Se você atualizar o console de serviços, o Cache de Fontes não deverá aparecer agora.&nbsp; Talvez seja necessário reinicializar o computador se a atualização do console de serviços não corrigir o problema.</P>
+<P>(Observação: esse&nbsp;problema se refere ao Client Profile&nbsp;e é uma&nbsp;cópia do problema&nbsp;888322 do Leiame&nbsp;referente à versão Full)&nbsp;</P>
+<H3>
+2.3 <A name="Product Issues">Problemas do produto</A>
+</H3>
+<H4>
+2.3.1 <A name="General Issues">Assuntos gerais</A>
+</H4>
+<H4>
+2.3.1.1  Falha na publicação ClickOnce devido à localização incorreta e de pacotes de idiomas redistribuíveis
+</H4>
+<P>Você poderá ver um erro de compilação se estiver usando as versões do Visual Studio 2010 em chinês simplificado ou chinês tradicional para publicar um aplicativo, caso selecione a opção ‘Baixar pré-requisitos do mesmo local de meu aplicativo' na caixa de diálogo Pré-requisitos e selecione qualquer um dos seguintes componentes como pré-requisitos:</P>
+<P><ol style="font-size: small">
+<LI>Microsoft .NET Framework 4 (x86 e x64) </LI>
+<LI>Microsoft .NET Framework 4 Client Profile (x86 e x64) </LI>
+<LI>Microsoft Visual F# Runtime para .NET 2.0</LI>
+<LI>Microsoft Visual F# Runtime para .NET 4.0</LI>
+</ol></P>
+<P>Este é o erro de compilação que você poderá ver para o ‘Microsoft .NET Framework 4 Client Profile (x86 e x64)’:</P>
+<P>'MSB3152: O local de instalação dos pré-requisitos não foi definido como o 'site do fornecedor de componentes', e o arquivo 'DotNetFX40Client\dotNetFx40LP_Client_x86_x64cs.exe' no item 'Microsoft .NET Framework 4 Client Profile (x86 e x64)' não pode ser localizado no disco. Consulte a Ajuda para obter mais informações.</P>
+<P><U>Para contornar esse problema:</U></P>
+<ol style="font-size: small">
+<P>Para contornar esse problema em chinês simplificado, siga estas etapas:</P>
+<LI>Navegue até a pasta '%ProgramFiles%\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages\DotNetFX40Client'. Para sistemas operacionais x64, o caminho é em %ProgramFiles(x86)%. </LI>
+<LI>Copie a pasta zh-Hans em uma nova pasta denominada zh-chs</LI>
+<LI>Navegue até a pasta zh-chs.</LI><LI>Abra Package.xml no modo de administrador.</LI><LI>Altere o valor de &gt;Culture&lt; para zh-chs da seguinte maneira:</LI><P>&lt;String Name=”Culture”&gt;zh-chs&lt;/String&gt;</P></OL>
+<ol style="font-size: small">
+<P>Para contornar esse problema em chinês tradicional, siga estas etapas:</P>
+<LI>Navegue até a pasta '%ProgramFiles%\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages\DotNetFX40Client'. Para sistemas operacionais x64, o caminho é em %ProgramFiles(x86)%. </LI>
+<LI>Copie a pasta zh-Hant em uma nova pasta denominada zh-cht</LI>
+<LI>Navegue até a pasta zh-cht.</LI><LI>Abra Package.xml no modo de administrador.</LI><LI>Altere o valor de &gt;Culture&lt; para zh-cht da seguinte maneira:</LI><P>&lt;String Name=”Culture”&gt;zh-cht&lt;/String&gt;</P></OL>
+<H4>
+2.3.1.2  O aplicativo ClickOnce instala os pacotes de idiomas redistribuíveis incorretos
+</H4>
+<P>Você talvez não consiga instalar os pacotes de idiomas chinês simplificado ou chinês tradicional se estiver usando as versões do Visual Studio 2010 em chinês simplificado ou chinês tradicional para publicar um aplicativo, caso selecione a opção ‘Baixar pré-requisitos do site do fornecedor do componente' na caixa de diálogo Pré-requisitos e selecione qualquer um dos seguintes componentes como pré-requisitos:</P>
+<P><ol style="font-size: small">
+<LI>Microsoft .NET Framework 4 (x86 e x64) </LI>
+<LI>Microsoft .NET Framework 4 Client Profile (x86 e x64) </LI>
+<LI>Microsoft Visual F# Runtime para .NET 2.0</LI>
+<LI>Microsoft Visual F# Runtime para .NET 4.0</LI>
+</ol></P>
+<P><U>Para contornar esse problema:</U></P>
+<ol style="font-size: small">
+<P>Para contornar esse problema em chinês simplificado, siga estas etapas:</P>
+<LI>Navegue até a pasta '%ProgramFiles%\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages\DotNetFX40Client'. Para sistemas operacionais x64, o caminho é em %ProgramFiles(x86)%. </LI>
+<LI>Copie a pasta zh-Hans em uma nova pasta denominada zh-chs</LI>
+<LI>Navegue até a pasta zh-chs.</LI><LI>Abra Package.xml no modo de administrador.</LI><LI>Altere o valor de &gt;Culture&lt; para zh-chs da seguinte maneira:</LI><P>&lt;String Name=”Culture”&gt;zh-chs&lt;/String&gt;</P></OL>
+<ol style="font-size: small">
+<P>Para contornar esse problema em chinês tradicional, siga estas etapas:</P>
+<LI>Navegue até a pasta '%ProgramFiles%\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages\DotNetFX40Client'. Para sistemas operacionais x64, o caminho é em %ProgramFiles(x86)%. </LI>
+<LI>Copie a pasta zh-Hant em uma nova pasta denominada zh-cht</LI>
+<LI>Navegue até a pasta zh-cht.</LI><LI>Abra Package.xml no modo de administrador.</LI><LI>Altere o valor de &gt;Culture&lt; para zh-cht da seguinte maneira:</LI><P>&lt;String Name=”Culture”&gt;zh-cht&lt;/String&gt;</P></OL>
+<H4>
+2.3.2 <A name="ASP.NET">ASP.NET</A>
+</H4>
+<H4>
+2.3.2.1  Depois de instalar o .NET Framework 4 no Windows 7, você não pode mais configurar arquivos aspnet.config para pools de aplicativos individuais no IIS 7.5
+</H4>
+<P>Após a instalação do .NET Framework 4 em um computador cliente ou servidor que esteja executando o Windows 7 e tenha o IIS 7.5 habilitado, a opção de configurar arquivos de configuração do ASP.NET para diferentes pools de aplicativos para de funcionar. Isso ocorre porque a instalação do .NET Framework 4 causa uma&nbsp;ligeira alteração no comportamento padrão da inicialização do CLR (common language runtime). Quando o .NET Framework 4 é instalado, o IIS 7.5 no Windows 7 chama uma DLL nativa do ASP.NET 4 para executar a inicialização do CLR, e essa lógica de inicialização não permite o uso de diferentes arquivos de configuração.</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Como a lógica de inicialização do CLR é basicamente igual para o .NET Framework 4 e para o IIS 7.5 (exceto para o efeito colateral do arquivo de configuração), você pode reconfigurar o IIS 7.5 de forma que ele não delegue mais a inicialização do CLR ao ASP.NET 4. Isso pode ser feito de duas maneiras.</P>
+<P>Opção 1<BR>----------<BR>No arquivo applicationHost.config do IIS 7.5, defina o valor padrão do atributo "managedRuntimeLoader" como uma cadeia de caracteres vazia, como no exemplo a seguir:</P>
+<P>&lt;applicationPools&gt;<BR>&nbsp; &lt;applicationPoolDefaults managedRuntimeLoader="" /&gt;<BR>&lt;/applicationPools&gt;</P>
+<P>Opção 2<BR>----------<BR>No arquivo IIS_Schema.xml do IIS 7.5, defina "defaultValue" no atributo denominado "managedRuntimeLoader" como uma cadeia de caracteres vazia. Por exemplo, o atributo poderá originalmente ser semelhante ao seguinte exemplo:&nbsp; </P>
+<P>&lt;attribute name="managedRuntimeLoader" type="string" defaultValue="webengine4.dll" /&gt; </P>
+<P>Altere-o para a seguinte marcação:</P>
+<P>&lt;attribute name="managedRuntimeLoader" type="string" defaultValue="" /&gt;</P>
+<H4>
+2.3.2.2  O cancelamento do registro e o novo registro do ASP.NET 4 no Windows XP e no Windows Server 2003 geram um valor vazio para a versão do ASP.NET na guia de propriedades do ASP.NET no MMC do IIS
+</H4>
+<P>No Windows XP e no Windows Server 2003 (todas as versões), se você cancelar o registro do ASP.NET 4 no IIS e depois registrá-lo novamente, o MMC IIS exibirá um valor vazio para a lista de versões do ASP.NET na guia ASP.NET. A sequência de etapas a seguir causará o problema:</P>
+<ol style="font-size: small">
+<LI>Usando a versão ASP.NET 4 do aspnet_regiis, execute "aspnet_regiis -u"</LI>
+<LI>Usando a versão ASP.NET 4 do aspnet_regiis, execute "aspnet_regiis -i -enable"</LI></OL>
+<P><U>Para resolver esse problema:</U></P>
+<P>Na lista de versões do ASP.NET no MMC do IIS, selecione manualmente a versão desejada do ASP.NET e clique no botão "Aplicar".</P>
+<H4>
+2.3.2.3  Tarefas de compilação do ASP.NET no Windows Vista, no Windows Server 2008 e no Windows 7 podem falhar porque o processo de trabalho do IIS não tem permissões de gravação no diretório temporário Windows
+</H4>
+<P>Algumas tarefas de compilação do ASP.NET no Windows Vista, no Windows Server 2008 e no Windows 7 podem falhar porque o processo de trabalho do IIS não tem permissões para o diretório temporário Windows (%WINDOWS%\Temp). Quando você tentar compilar itens como referências a serviços Web que dependem de arquivos WSDL, poderá ver erros como este: "Mensagem de Erro do Analisador: não é possível gerar uma classe temporária".<BR>&nbsp;<BR>Esse erro ocorrerá se o IIS estiver habilitado no computador e o .NET Framework 4 estiver instalado, mas os recursos ASP.NET e Extensibilidade .NET não estiverem habilitados.</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Opção 1<BR>----------<BR>Conceda explicitamente permissões de gravação ao diretório temporário Windows (%WINDOWS%\Temp) para a conta do processo de trabalho do IIS. Um modo de fazer isso é&nbsp;conceder acesso de gravação a um grupo que inclua a conta do processo de trabalho, por exemplo, o grupo IIS_IUSRS.<BR>&nbsp;<BR>Opção 2<BR>---------<BR>Habilite os recursos ASP.NET e Extensibilidade .NET. No Painel de Controle do Windows, abra "Programas" e, em "Programas e Recursos", clique em "Ativar ou desativar recursos do Windows". Na caixa de diálogo "Recursos do Windows", abra o nó "Serviços de Informações da Internet", depois "Serviços da World Wide Web" e, em seguida, "Recursos de Desenvolvimento de Aplicativos". Habilite os seguintes recursos:</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp; Extensibilidade .NET<BR>&nbsp;&nbsp;&nbsp;&nbsp; ASP.NET</P>
+<H4>
+2.3.2.4  A tentativa de carregar assemblies da Web pré-compilados que são implantados no GAC falha e gera a exceção "SecurityException" quando o site está sendo executado em confiança parcial
+</H4>
+<P>É possível pré-compilar sites do ASP.NET usando a ferramenta de linha de comando aspnet_compiler.exe. Se você assinar os assemblies resultantes com uma chave, poderá implantar assemblies no GAC em vez de na pasta Bin do site. </P>
+<P>No ASP.NET 4, se um site sendo executado em confiança parcial tentar carregar os assemblies do GAC, uma exceção "System.Security.SecurityException" será gerada. Isso ocorre porque, por padrão, o ASP.NET 4 usa uma implementação de CAS (segurança de acesso do código) mais recente do que as versões anteriores do ASP.NET. Na nova implementação de CAS, os assemblies pré-compilados e assinados que são implantados no GAC devem ser explicitamente marcados por meio do atributo "SecurityTransparent".</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Opção 1<BR>--------<BR>Antes de compilá-lo, marque o assembly usando o atributo "SecurityTransparent", como mostra o seguinte exemplo:</P>
+<P>[assembly:System.Security.SecurityTransparentAttribute]</P>
+<P>Opção 2<BR>--------<BR>Adicione uma configuração "compilerOptions" ao arquivo de configuração Web.config para o site, conforme é descrito no artigo "Como criar assemblies com versão atualizada para sites da Web pré-compilados" (<A href="http://msdn.microsoft.com/en-us/library/ms228042.aspx">http://msdn.microsoft.com/en-us/library/ms228042.aspx</A>). Como parte desse processo, adicione a seguinte linha ao arquivo AssemblyInfo.vb ou AssemblyInfo.cs que é referenciado pela configuração "compilerOptions":</P>
+<P>[assembly:System.Security.SecurityTransparentAttribute]</P>
+<P>Opção 3<BR>--------<BR>Crie uma biblioteca de classes fictícia contendo o seguinte atributo:</P>
+<P>[assembly:System.Security.SecurityTransparentAttribute]</P>
+<P>Compile a biblioteca de classes em um assembly e execute a ferramenta de linha de comando aspnet_merge.exe na saída do site pré-compilado usando a opção "copyattrs", como mostra este exemplo:</P>
+<P>aspnet_merge c:\MyApplicationRootDirectory -copyattrs assemblyfile.dll </P>
+<P>Para o nome da DLL, use o nome da biblioteca de classes fictícia que é marcada com o atributo "SecurityTransparent".</P>
+<P>Opção 4<BR>--------<BR>Reverta temporariamente para o modo de CAS mais antigo definindo o atributo "legacyCasModel" do elemento "trust" como "true" no arquivo Web.config para o site, como mostra este exemplo:</P>
+<P>&lt;trust level="Medium" legacyCasModel="true"/&gt;</P>
+<P>Depois de fazer essa alteração, é recomendável que você use uma das outras opções para adicionar o atributo "SecurityTransparent" a assemblies pré-compilados. Você poderá então remover o atributo "legacyCasModel" e executar o site no novo modo de CAS.</P>
+<H4>
+2.3.2.5  Os aplicativos ASP.NET e WCF talvez não sejam iniciados no modo integrado do IIS 7
+</H4>
+<P>Se novas seções de configuração forem adicionadas ao arquivo Web.config de um aplicativo ASP.NET ou Windows Communication Foundation (WCF), o aplicativo não será iniciado quando estiver em execução no modo integrado do IIS 7. </P>
+<P>Por exemplo, se uma seção de configuração &lt;standardEndpoints&gt; for adicionada ao arquivo Web.config de um aplicativo WCF, o aplicativo não será iniciado quando estiver em execução no modo integrado do IIS 7. Em vez disso, o IIS 7 retornará um erro de validação de configuração, pois a nova seção de configuração não é reconhecida pelo sistema de configuração do IIS 7.</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Baixe e instale um hotfix publicamente disponível para esse problema.&nbsp;O hotfix está disponível em <A href="http://support.microsoft.com/kb/958854">http://support.microsoft.com/kb/958854</A>. Outra opção é&nbsp;instalar o Windows Vista SP 2, que inclui a correção.&nbsp; O Windows 7 e o Windows Server 2008 R2 não apresentam esse problema porque esses sistemas operacionais já incluem a correção necessária.</P>
+<H4>
+2.3.2.6  Talvez seja necessário registrar novamente o ASP.NET 4 no Windows Vista, no Windows Server 2008, Windows 7 e no Windows Server 2008 R2
+</H4>
+<P>O ASP.NET 4 deverá ser novamente registrado se o IIS 7/7.5 ou o recurso Extensibilidade .NET do IIS7/7.5 for habilitado *depois* que o .NET Framework 4 for instalado no computador. O ASP.NET 4 deverá ser novamente registrado se o recurso Extensibilidade .NET for removido quando o .NET Framework 4 estiver instalado no computador.</P>
+<P>Para ambos os casos, é necessário um novo registro porque o processo de instalação e desinstalação do sistema operacional para o IIS7 e o IIS 7.5,&nbsp;bem como o recurso Extensibilidade .NET, não foi projetado para o cenário em que uma versão posterior do&nbsp;.NET Framework já existe no computador.</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Para registrar novamente o ASP.NET 4, execute o seguinte comando:</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aspnet_regiis -iru -enable&nbsp; </P>
+<P>Assegure-se de usar a versão do aspnet_regiis.exe que está instalada no diretório de instalação do .NET Framework 4.</P>
+<H4>
+2.3.2.7  A guia do console de gerenciamento (MMC) do ASP.NET pode não ser exibida quando você administra um servidor Web remoto
+</H4>
+<P>A guia ASP.NET pode não ser exibida quando você executa o console de gerenciamento (MMC) em um computador local ao administrar um servidor Web remoto. Isso ocorre quando você usa a ferramenta de gerenciamento IIS&nbsp;6 para gerenciar remotamente um servidor Web que tem o ASP.NET instalado, e quando o computador local está executando o Windows Server 2008 x64, o Windows 7 ou o Windows Server 2008 R2 (x86 ou x64).</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Não há nenhuma solução alternativa.</P>
+<H4>
+2.3.2.8  A execução da versão ASP.NET 2.0 do "aspnet_regiis -ua" não cancela o registro de outras versões do ASP.NET, inclusive o ASP.NET 4
+</H4>
+<P>A execução da versão ASP.NET 2.0 do comando "aspnet_regiis -ua" no Windows Vista, no Windows Server 2008, no Windows 7 ou no Windows Server 2008 R2 causa o seguinte erro:&nbsp; </P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Não há suporte para a solicitação.</P>
+<P>Isso ocorre porque a versão ASP.NET 2.0 do comando "aspnet_regiis" não consegue detectar que existe uma versão posterior do ASP.NET no computador.</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Execute a versão ASP.NET 4 do comando "aspnet_regiis -ua" para cancelar o registro de todas as versões do ASP.NET no computador.</P>
+<H4>
+2.3.2.9  A execução de "aspnet_regiis -i" no Windows Server 2003 não força recursivamente a atualização de diretórios virtuais para ASP.NET 4
+</H4>
+<P>No ASP.NET 2.0, o comando "aspnet_regiis -i"&nbsp;atualiza recursivamente todos os diretórios virtuais no Windows Server 2003 para que usem o ASP.NET 2.0. No ASP.NET 4, o comando "aspnet_regiis -i" no Windows Server 2003 atualiza somente a raiz do IIS 6 para ASP.NET 4. Se quaisquer diretórios virtuais abaixo da raiz forem explicitamente configurados para executar uma versão específica do ASP.NET, esses diretórios virtuais reterão a versão do ASP.NET que foi explicitamente configurada e não herdarão a configuração do&nbsp;ASP.NET 4 dos diretórios raiz. </P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Execute as versões do ASP.NET 4 de qualquer um destes comandos:</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aspnet_regiis -s</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aspnet_regiis -r</P>
+<P>Esses comandos forçam uma atualização recursiva de todos os diretórios virtuais para ASP.NET 4.</P>
+<H4>
+2.3.2.10  O cancelamento do registro do ASP.NET 2.0 interrompe os contadores de desempenho do ASP.NET 4
+</H4>
+<P>O cancelamento do registro do ASP.NET&nbsp;2.0&nbsp;em qualquer versão de sistema operacional em que o ASP.NET&nbsp;4 já esteja registrado corrompe alguns registros dos contadores de desempenho no ASP.NET&nbsp;4. Isso ocorre porque o processo de cancelamento de registro do ASP.NET&nbsp;2.0 não consegue detectar que uma versão posterior do ASP.NET está instalada no computador. Com isso, quando você usa alguns contadores de desempenho do ASP.NET&nbsp;4, podem aparecer erros como os seguintes no log de eventos do aplicativo:&nbsp; </P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Não é possível localizar o procedimento de abertura "%pef_counter_name%" na DLL "%WINDOWS%\Microsoft.NET\Framework\v4.0.NNNNN\aspnet_perf.dll" para o serviço "ASP.NET"."</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Coleção de dados de contador de desempenho do serviço "ASP.NET" desativada devido a um ou mais erros gerados pela biblioteca do contador de desempenho para o serviço."</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Execute a versão ASP.NET 4 do comando "aspnet_regiis&nbsp;-iru".&nbsp; Esse procedimento registra novamente os contadores de desempenho do ASP.NET&nbsp;4.</P>
+<H4>
+2.3.2.11  As instâncias de usuário do SQL Server Express não funcionam com projetos de aplicativos Web no IIS 6 ou no IIS 7 ou com aplicativos no IIS 7.5
+</H4>
+<P>Por padrão, os projetos Web e os aplicativos Web do ASP.NET 4 baseados em instâncias de usuário do SQL Server Express não funcionam nos seguintes cenários:</P>
+<ol style="font-size: small">
+<LI>Um WAP (projeto de aplicativo Web) é hospedado como um diretório virtual em qualquer versão do IIS.&nbsp; Isso ocorre porque as interfaces do usuário do SQL Server Express requerem permissões de arquivo específicas para a pasta&nbsp;Documentos do usuário, e a conta de serviço do IIS (NETWORK SERVICE) não tem essas permissões.</LI>
+<LI>Um site&nbsp;é hospedado no IIS 7.5 em execução no Windows 7 ou no Windows Server 2008 R2.&nbsp;Isso ocorre porque as credenciais de segurança padrão para pools de aplicativos do IIS 7.5 não se baseiam em NETWORK SERVICE.</A></LI></OL>
+<P><U>Para resolver esse problema:</U></P>
+<P>Para obter detalhes sobre como resolver esses problemas, consulte o artigo em &nbsp; </P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A href="http://go.microsoft.com/fwlink/?LinkID=160102">http://go.microsoft.com/fwlink/?LinkID=160102</A></P>
+<H4>
+2.3.2.12  Erros de configuração são gerados pelo ASP.NET 4 ou pelo IIS 7 quando existem seções relacionadas em arquivos Web.config em nível de aplicativo
+</H4>
+<P>No ASP.NET 4, o arquivo Web.config padrão foi significativamente reduzido em tamanho. Com isso, o IIS 7 (no Windows Vista e no Windows Server 2008) e o IIS 7.5 (no Windows Server 2008 R2)&nbsp;gerarão erros de configuração. Os erros exatos dependem das atualizações instaladas no sistema operacional e do &nbsp;tipo de informações de configuração contido nos arquivos Web.config em nível de aplicativo.</P>
+<P><B>Windows Vista&nbsp;SP1 ou Windows Server 2008 SP1, onde não está instalado o hotfix KB958854 nem o SP2</B>. Nessa configuração, o sistema de configuração do IIS 7 mescla incorretamente a configuração gerenciada de um aplicativo comparando o arquivo Web.config em nível de aplicativo aos arquivos machine.config do ASP.NET&nbsp;2.0.&nbsp;Com isso, os arquivos Web.config em nível de aplicativo do&nbsp;.NET&nbsp;Framework 3.5 ou do .NET Framework 4&nbsp;devem ter uma seção de configuração &lt;system.web.extensions&gt; para não causar uma falha de validação do IIS 7.&nbsp; As entradas do arquivo&nbsp;Web.config em nível de aplicativo manualmente modificadas que não corresponderem exatamente às definições da seção de configuração clichê original, que foram introduzidas com o Visual Studio 2008, causarão erros de configuração. (As entradas de configuração padrão geradas pelo Visual Studio 2008 não funcionam). Um problema comum é que os arquivos Web.config manualmente modificados omitem os atributos de configuração para "allowDefinition" e "requirePermission" que se encontram em várias definições da seção de configuração. Com isso, existe uma incompatibilidade entre a seção de configuração abreviada em arquivos Web.config em nível de aplicativo e a definição completa no arquivo machine.config do ASP.NET&nbsp;4.&nbsp;Portanto, em tempo de execução, o sistema de configuração do ASP.NET&nbsp;4 gera um erro de configuração.</P>
+<P><B>Windows Vista SP2, Windows Server 2008 SP2, Windows 7, Windows Server 2008 R2, Windows Vista SP1 e Windows Server 2008 SP1, onde o hotfix KB958854 está instalado.</B> Neste cenário, o sistema de configuração nativa do IIS 7 e do IIS 7.5 retorna um erro de configuração, pois ele faz uma comparação de textos no atributo "type" definido para um manipulador da seção de configuração gerenciada.&nbsp;Como todos os arquivos Web.config gerados pelo Visual Studio 2008 e pelo Visual Studio 2008 SP1 contêm "3.5" na cadeia de caracteres de tipo para as seções de configuração &lt;system.web.extensions&gt; (e relacionadas), e como o arquivo machine.config do ASP.NET 4 contém "4.0" no atributo "type" para as mesmas seções de configuração, os aplicativos gerados no Visual Studio 2008 ou no Visual Studio 2008 SP1 sempre falham na validação de configuração no IIS&nbsp;7 e no IIS&nbsp;7.5.</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Para o primeiro cenário, atualize o arquivo Web.config em nível de aplicativo incluindo o texto de configuração clichê de um arquivo Web.config que foi gerado automaticamente pelo Visual Studio 2008.</P>
+<P>Para o segundo cenário, exclua ou comente todas as definições da seção de configuração &lt;system.web.extensions&gt; e as definições do grupo de seções de configuração&nbsp;do arquivo Web.config em nível de aplicativo.</P>
+<H4>
+2.3.2.13  Os dados de parâmetros não são passados para o método System.Web.Hosting.IProcessHostPreloadClient.Preload
+</H4>
+<P>O método <B>System.Web.Hosting.IProcessHostPreloadClient.Preload</B> utiliza uma matriz de cadeia de caracteres como um parâmetro de entrada.&nbsp;Entretanto, não há um meio de definir esses dados, e nenhuma informação é passada nesse parâmetro.</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Versões prévias do recurso de início automático do IIS 7.5 ofereciam suporte a uma forma de configurar um ou mais valores de cadeia de caracteres a serem passados para o método <B>IProcessHostPerloadClient.Preload</B> do ASP.NET 4.&nbsp;Entretanto, essa funcionalidade foi removida antes da versão final do Windows 7 e do Windows Server 2008 R2.</P>
+<H4>
+2.3.2.14  O recurso Extensibilidade .NET do IIS7/IIS7.5 no Windows Vista, no Windows Server 2008, no Windows 7 e no Windows Server 2008 R2 não está integrado ao ASP.NET 4
+</H4>
+<P>O recurso Extensibilidade .NET do IIS&nbsp;7 e do IIS&nbsp;7.5 é uma opção de configuração que está disponível na caixa de diálogo "Recursos do Windows" para instalar ou desinstalar recursos do IIS&nbsp;7 ou do IIS&nbsp;7.5.&nbsp;O recurso está localizado no seguinte nó:</P>
+<P><B>Serviços de Informações da Internet &nbsp;&gt; Serviços da World Wide Web &nbsp;&gt; Recursos de Desenvolvimento de Aplicativos &nbsp;&gt; Extensibilidade&nbsp; .NET&nbsp;</B></P>
+<P>No Windows Vista, no Windows Server 2008, no Windows 7 e no Windows Server 2008 R2, o recurso Extensibilidade .NET&nbsp;afeta somente a integração do ASP.NET&nbsp;2.0 com o IIS 7 ou o IIS&nbsp;7.5. Ele não afeta o registro ou o cancelamento do registro do ASP.NET&nbsp;4 com o IIS&nbsp;7 ou o IIS 7.5.</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Para gerenciar a integração do&nbsp;ASP.NET&nbsp;4 com o IIS&nbsp;7 ou o IIS&nbsp;7.5, use a versão ASP.NET 4 do comando "aspnet_regiis.exe". </P>
+<H4>
+2.3.2.15  Os aplicativos ASP.NET 2.0 executados no IIS 6 podem gerar erros como "System.Web.HttpException: Path '/[RaizDoAplicativo]/eurl.axd/[Value]' não encontrado."
+</H4>
+<P>Os aplicativos ASP.NET 2.0 executados no IIS 6 (Windows Server 2003 ou Windows Server 2003 R2) podem gerar erros como este:</P>
+<P>System.Web.HttpException: Path '/[RaizDoAplicativo]/eurl.axd/[Valor]' não encontrado. </P>
+<P>Esse erro ocorre somente depois que o ASP.NET 4 é habilitado no IIS 6. Ele ocorre porque, quando o ASP.NET detecta que um site está configurado para usar o ASP.NET 4, um componente nativo do ASP.NET 4 passa URLs sem extensão para a parte gerenciada do ASP.NET para processamento adicional. </P>
+<P>Entretanto, se os diretórios virtuais que estiverem em um site do ASP.NET 4 estiverem configurados para usar o ASP.NET 2.0, o processamento de URLs sem extensão dessa forma criará uma URL modificada contendo "eurl.axd", que é então enviada ao aplicativo ASP.NET 2.0. O ASP.NET 2.0 não reconhece o formato "eurl.axd".&nbsp; Portanto, o ASP.NET 2.0 tenta localizar um arquivo denominado "eurl.axd" e executá-lo.&nbsp; Como não existe tal arquivo, a solicitação falha com uma exceção "HttpException".</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Opção 1<BR>--------<BR>Se o ASP.NET 4 não for necessário para executar o site, remapeie o site para usar então o ASP.NET 2.0.</P>
+<P>Opção 2<BR>---------<BR>Se o ASP.NET 4 for necessário para executar o site, mova quaisquer diretórios virtuais filho do ASP.NET 2.0 para outro site que esteja mapeado para o ASP.NET 2.0.</P>
+<P>Opção 3<BR>---------<BR>Se não for prático remapear o site para o ASP.NET 2.0 ou alterar a localização de um diretório virtual, desabilite explicitamente o processamento de URLs sem extensão no ASP.NET 4. Use o seguinte procedimento:</P>
+<P>1.&nbsp;No Registro do Windows, abra o seguinte nó:&nbsp; </P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp; HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ASP.NET\4.0.&lt;build#&gt;&nbsp;&nbsp;&nbsp;</P>
+<P>&nbsp;Observação: &lt;build#&gt; é o número da compilação da versão de lançamento do .NET Framework 4.</P>
+<P>2. Crie um valor DWORD denominado "EnableExtensionlessUrls".</P>
+<P>3.&nbsp;Defina "EnableExtensionlessUrls" como 0. Isso desabilita o comportamento de URLs sem extensão. </P>
+<P>4. Salve o valor do Registro e feche o Editor do Registro.</P>
+<P>5. Execute a ferramenta de linha de comando "iisreset", que faz com que o IIS leia o novo valor do Registro.</P>
+<P>&nbsp;Observação: a definição de "EnableExtensionlessUrls" como 1 habilita o comportamento de URLs sem extensão. Essa será a configuração padrão se nenhum valor for especificado.</P>
+<H4>
+2.3.2.16  Sites que usam o Entity Framework e foram criados com versões de pré-lançamento do ASP.NET 4 param de funcionar devido a referências de assembly ausentes
+</H4>
+<P>Referências a namespaces e assemblies exigidas por projetos Web que usam o Entity Framework&nbsp;foram removidas da versão RTM do arquivo Web.config raiz. Com isso, sites de Dados Dinâmicos que usam EntityDataSource, bem como&nbsp;aplicativos Web que usam o Entity Framework e foram criados com versões de pré-lançamento do ASP.NET 4, irão falhar e relatar erros de compilação.</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Você poderá inserir as referências a assemblies e namespaces ausentes no arquivo Web.config do aplicativo. O exemplo a seguir mostra os elementos assembly e namespace que devem ser manualmente inseridos no arquivo Web.config em nível de aplicativo.</P>
+<P>&lt;system.web&gt;</P>
+<P>&lt;compilation&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;assemblies&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add assembly="System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add assembly="System.Web.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add assembly="System.Data.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add assembly="System.Data.Entity.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/assemblies&gt;<BR>&nbsp;&nbsp;&nbsp; &lt;/compilation&gt;</P>
+<P>&nbsp;&nbsp;&nbsp; &lt;pages&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;namespaces&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add namespace="System.Data.Entity.Design" /&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add namespace="System.Data.Linq" /&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/namespaces&gt;<BR>&nbsp;&nbsp;&nbsp; &lt;/pages&gt;</P>
+<P>&lt;/system.web&gt;</P>
+<H4>
+2.3.2.17  Versões de pré-lançamento do ASP.NET 4 executadas no IIS 7 ou no IIS 7.5 no modo integrado poderão relatar um erro NullReferenceException sem tratamento gerado na classe RoleManagerModule
+</H4>
+<P>Em determinadas ordens de instalação do .NET Framework versões 2.0 e 4 no Windows Vista, no Windows Server 2008, no Windows 7 e no Windows Server 2008 R2, os aplicativos ASP.NET 4 geram um erro NullReferenceException sem tratamento na classe RoleManagerModule. Isso ocorre quando o ASP.NET 4 é a única versão do ASP.NET que está sendo registrada com o IIS 7 ou o IIS 7.5, e o ASP.NET 2.0 nunca foi registrado com o IIS, ou o ASP.NET 2.0 foi registrado no IIS 7 ou no IIS 7.5.</P>
+<P>Qualquer que seja o cenário, o registro autônomo do ASP.NET 4 resulta na ordem incorreta no arquivo de configuração para dois módulos HTTP que são usados em aplicativos no modo integrado.</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Embora esse problema esteja corrigido na versão de lançamento do ASP.NET 4, as versões de pré-lançamento do ASP.NET 4 podem ter especificado a ordem incorreta dos módulos. Se a exceção sem tratamento ainda estiver ocorrendo em um computador que tenha sido atualizado da versão de pré-lançamento do ASP.NET 4 para a versão RTM, siga estas etapas:</P>
+<P>1.&nbsp; Abra o arquivo applicationHost.config, que está na seguinte pasta:</P>
+<P>%windir%\System32\inetsrv\config</P>
+<P>2. Localize o elemento a seguir</P>
+<P>&lt;location path="" overrideMode="Allow"&gt;</P>
+<P>Nesse elemento está a lista de módulos HTTP do modo integrado. As informações estão no elemento &lt;modules&gt;.</P>
+<P>3. Localize o elemento que começa com a seguinte cadeia de caracteres:</P>
+<P>&lt;add name="RoleManager"&nbsp; ...</P>
+<P>4. Mova o elemento para baixo do elemento que começa com a seguinte cadeia de caracteres:</P>
+<P>&lt;add name="DefaultAuthentication"...</P>
+<P>5. Salve o arquivo.</P>
+<P>Quando você terminar, uma parte da definição &lt;modules&gt; deverá ser semelhante ao seguinte exemplo:</P>
+<P>&lt;add name="DefaultAuthentication" type="System.Web.Security.DefaultAuthenticationModule" preCondition="managedHandler" /&gt;<BR>&lt;add name="RoleManager" type="System.Web.Security.RoleManagerModule" preCondition="managedHandler" /&gt;</P>
+<H4>
+2.3.2.18  Os aplicativos MVC 2 e ASP.NET 4 Web Forms que usam o encaminhamento de URL poderão retornar erros HTTP 404 quando tentarem processar URLs sem extensão no IIS 7 e no IIS 7.5
+</H4>
+<P>Os aplicativos MVC 2 e ASP.NET 4 Web Forms que usam URLs sem extensão poderão retornar erros HTTP 404 quando executados no Windows Vista, no Windows Server 2008, no Windows 7 ou no Windows Server 2008 R2. Essa situação pode ocorrer somente quando a opção Extensibilidade .NET Framework está ativa enquanto o &nbsp;IIS&nbsp;é instalado por meio da caixa de diálogo Recursos do Windows. Uma instalação mínima do IIS não incluirá determinados módulos HTTP. Devido à forma como o ASP.NET e o IIS gerenciam transições de eventos de pipeline HTTP, os módulos HTTP ausentes impedem que o módulo de encaminhamento de URLs do ASP.NET seja executado no momento adequado. Com isso, as solicitações de URLs sem extensão não são processadas pelo módulo de encaminhamento de URLs, e ocorre um erro 404.</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Na caixa de diálogo "Ativar ou desativar recursos do Windows" do aplicativo "Programas e Recursos" do Painel de Controle do Windows, <BR>execute as seguintes etapas:</P>
+<P>1. Navegue até o seguinte nó:</P>
+<P>Serviços de Informações da Internet --&gt; Serviços da World Wide Web --&gt; Recursos HTTP Comuns</P>
+<P>2. Verifique se a opção "Redirecionamento de Erros HTTP" está selecionada.</P>
+<P>-ou-</P>
+<P>1. Navegue até o seguinte nó:</P>
+<P>Serviços de Informações da Internet --&gt; Serviços da World Wide Web --&gt; Recursos de Desempenho</P>
+<P>2. Verifique se a opção "Compactação de Conteúdo Estático" está selecionada.</P>
+<P>Após as opções serem selecionadas, clique em "OK" para salvar as alterações.</P>
+<P>A reabilitação do módulo Redirecionamento HTTP ou Compactação de Conteúdo Estático assegura que o ASP.NET e o IIS sincronizem corretamente os eventos de pipeline HTTP. Isso permite que o módulo de encaminhamento de URLs processe URLs sem extensão.</P>
+<H4>
+2.3.2.19  O assembly System.Web.Mobile.dll foi removido do arquivo Web.config raiz
+</H4>
+<P>Em versões anteriores do ASP.NET, uma referência ao assembly System.Web.Mobile.dll era incluída no arquivo Web.config raiz da seção &lt;assemblies&gt; em &lt;system.web&gt;&lt;compilation&gt;. Para melhorar o desempenho, a referência ao assembly foi removida.</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>O assembly System.Web.Mobile.dll está incluído no ASP.NET 4, mas foi preterido. Se desejar usar tipos do assembly System.Web.Mobile.dll, adicione uma referência a esse assembly, no arquivo Web.config raiz ou em um arquivo Web.config de aplicativo. Por exemplo, se desejar usar qualquer um dos controles móveis do ASP.NET (preteridos), você deverá adicionar ao arquivo Web.config uma referência ao assembly System.Web.Mobile.dll.</P>
+<H4>
+2.3.2.20  Alterações feitas nos arquivos de definição do navegador e em recursos do navegador
+</H4>
+<P>Os&nbsp;arquivos de definição do navegador foram atualizados para conter informações sobre navegadores e dispositivos&nbsp;novos e atualizados.&nbsp;Navegadores e dispositivos mais antigos, como o Netscape&nbsp;Navigator, foram removidos e outros mais novos, como o Google Chrome e o Apple iPhone,&nbsp;foram adicionados.</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Você poderá usar os arquivos antigos de definição do navegador com o ASP.NET 4. Esses arquivos, e a respectiva documentação de instalação, estão contidos na versão dos Arquivos de Definição do Navegador ASP.NET em <A href="http://go.microsoft.com/fwlink/?LinkID=186493&amp;clcid=0x409">http://go.microsoft.com/fwlink/?LinkID=186493</A>.</P>
+<H4>
+2.3.2.21  ScriptManager.EnableCdn e arquivos Microsoft Ajax localizados
+</H4>
+<P>As versões localizadas dos arquivos Microsoft Ajax JavaScript,&nbsp;como o MicrosoftAjax.debug.ja.js, não&nbsp;serão adicionadas à CDN (rede de distribuição de conteúdo) do Microsoft Ajax&nbsp;até o lançamento das versões localizadas do .NET Framework 4. Portanto, não habilite a propriedade ScriptManager.EnableCdn quando estiver usando uma versão localizada do .NET Framework e da CDN.</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Aguarde o lançamento das versões localizadas do .NET Framework 4 para usar a CDN (rede de distribuição de conteúdo) do Microsoft Ajax. Enquanto isso, assegure-se de que os controles ScriptManager no seu aplicativo não tenham EnableCdn="true".</P>
+<H4>
+2.3.2.22  Controles de desempenho genéricos do ASP.NET relatam dados somente de aplicativos ASP.NET 4
+</H4>
+<P>Após a instalação do ASP.NET 4, os contadores de desempenho genéricos do ASP.NET relatarão dados somente de aplicativos ASP.NET 4.&nbsp; Se os contadores de desempenho genéricos forem usados nos aplicativos ASP.NET 1.1, ASP.NET 2.0 e ASP.NET 3.5, os contadores de desempenho não relatarão dados.&nbsp; Os dados de desempenho de aplicativos que executam versões anteriores do ASP.NET devem usar categorias de desempenho do ASP.NET com versão.</P>
+<P>Os contadores de desempenho genéricos do ASP.NET incluem as seguintes categorias de contadores de desempenho:&nbsp; "ASP.NET" e "Aplicativos do ASP.NET".</P>
+<P>As categorias de desempenho do ASP.NET com versão possuem nomes semelhantes a estes: "ASP.NET v2.0.50727" e "ASP.NET Apps v2.0.50727".</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Esse comportamento é definido por design.&nbsp; A versão mais recente do ASP.NET instalada em um computador "possui" as categorias de contadores de desempenho genéricas.&nbsp; Portanto, é recomendável que você use categorias de contadores de desempenho com versão ao coletar dados de desempenho de vários aplicativos ASP.NET que executam diferentes versões do ASP.NET.</P>
+<H4>
+2.3.3 <A name="Winforms">Winforms</A>
+</H4>
+<P>Não existem problemas conhecidos.</P>
+<H4>
+2.3.4 <A name="Parallel Programming">Programação paralela</A>
+</H4>
+<P>Não existem problemas conhecidos.</P>
+<H4>
+2.3.5 <A name="Managed Extensibility Framework">Managed Extensibility Framework</A>
+</H4>
+<P>Não existem problemas conhecidos.</P>
+<H4>
+2.3.6 <A name="Entity Framework">Entity Framework</A>
+</H4>
+<P>Não existem problemas conhecidos.</P>
+<H4>
+2.3.7 <A name="LINQ to SQL">LINQ to SQL</A>
+</H4>
+<P>Não existem problemas conhecidos.</P>
+<H4>
+2.3.8 <A name="Windows Communication Foundation (WCF)">Windows Communication Foundation (WCF)</A>
+</H4>
+<H4>
+2.3.8.1  O erro "O sistema não pode encontrar o arquivo especificado" ocorre quando o serviço é iniciado ou o IIS é redefinido após a atualização do perfil do cliente
+</H4>
+<P>Após a atualização do .NET Framework 4 para a versão RTM a partir da versão Beta 2, poderá ocorrer o seguinte erro quando você iniciar serviços ou reiniciar o IIS:</P>
+<P>"O sistema não pode encontrar o arquivo especificado"</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Repare o .NET Framework Client Profile no aplicativo Programas no painel de controle.</P>
+<H4>
+2.3.9 <A name="Windows Presentation Foundation (WPF)">Windows Presentation Foundation (WPF)</A>
+</H4>
+<H4>
+2.3.9.1  Não há suporte para o Windows Presentation Foundation (WPF) em ia64
+</H4>
+<P>
+Assemblies&nbsp;do WPF não são instalados nem têm suporte em computadores ia64.
+</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Não há nenhuma solução alternativa. O WPF não pode ser usado em ia64.</P>
+<H4>
+2.3.10 <A name="Windows Workflow Foundation (WF)">Windows Workflow Foundation (WF)</A>
+</H4>
+<H4>
+2.3.10.1  A validação de fluxo de trabalho não oferece suporte ao operador sizeof
+</H4>
+<P>Quando um fluxo de trabalho que inclui o operador sizeof é validado, uma exceção é gerada.</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Não use o operador sizeof em fluxos de trabalho.</P>
+<H4>
+2.3.11 <A name="Client Profile (Product)">Client Profile (Produto)</A>
+</H4>
+<H4>
+2.3.11.1  Não há suporte para o .NET Framework 4 Client Profile em ia64
+</H4>
+<P>Não há suporte para o .NET Framework 4 Client Profile em ia64.</P>
+<P><U>Para resolver esse problema:</U></P>
+<P>Se você desinstalar o .NET Framework 4 em ia64, assegure-se de desinstalar as versões Full e Client Profile.</P>
+<H2>
+3. <A name="Related Links">Links relacionados</A>
+</H2>
+<ul style="font-size: small">
+    <li>Microsoft <A href="http://www.microsoft.com/technet/security/bulletin/policy.mspx">agradece</A> às seguintes pessoas pela parceria na proteção aos clientes: 
+    </li>
+</ul>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* <A href="http://weblog.ikvm.net">Jeroen Frijters</A></p>
+<ul style="font-size: small">
+    <li>Para exibir uma lista de potenciais alterações de quebra para um desenvolvedor ASP.NET que está atualizando para o .NET Framework 4, consulte: <A href="http://go.microsoft.com/fwlink/?LinkID=186526">http://go.microsoft.com/fwlink/?LinkID=186526</A>. Essa lista é atualizada à medida que novos problemas são encontrados.</li>
+</ul>
+<P>&nbsp</P>
+<P>&copy; 2010 Microsoft Corporation. Todos os direitos reservados.</P>
+<P><a id="ctl00_BottomControl1_MSFT_Terms" href="http://go.microsoft.com/fwlink/?LinkId=189613&clcid=0x416" title="Termos de Uso">Termos de Uso</a> &nbsp;| <a href="http://go.microsoft.com/fwlink/?LinkId=94367&clcid=0x416" title="Marcas Comerciais">Marcas Comerciais</a> &nbsp;| <a href="http://go.microsoft.com/fwlink/?LinkId=94368&clcid=0x416" title="Declaração de Privacidade">Declaração de Privacidade</a>
+</P>
+</BODY>
+</HTML>
+

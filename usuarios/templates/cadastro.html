@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load static %}
+{% block 'head' %}
+    <link rel="stylesheet" href="{% static 'usuarios/css/usuarios.css' %}">
+    <script src="https://unpkg.com/htmx.org@1.9.11" integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0" crossorigin="anonymous"></script>
+{% endblock 'head' %}
+
+{% block 'body' %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md d-flex justify-content-center">
+                <div class="cont-cadastro">
+                    <br>
+                    <br>
+                    <section class="cont-logo">
+                        <img class="logo" src="{% static 'geral/img/logo.png' %}">
+                        <label class="text-logo">HEALING</label>
+                    </section>
+                    <hr>
+                    
+                    <form action="{% url 'cadastro' %}" method="post">{% csrf_token %}
+                        <h2 class="fonte-destaque1">Cadastre-se</h2>
+                        
+                        {% if messages %}
+                        <br>
+                            {% for message in messages %}
+                                <section class="alert {{message.tags}}">
+                                    {{message}}
+                                </section>
+                            {% endfor %}
+                        {% endif %}
+                        <br>
+                        <div class="row">
+                            <div class="col-md">
+                                <label for="">Primeiro Nome:</label>
+                                <input type="text" name="first_name" value="{{first_name}}" class="form-control" placeholder="Digite o primeiro nome ...">
+                                
+                            </div>
+                            <div class="col-md">
+                                <label for="">Último Nome:</label>
+                                <input type="text" name="last_name" value="{{last_name}}" class="form-control" placeholder="Digite seu último nome ..." id="">
+                            </div>
+                        </div>
+                        <br>
+                        <label for="">Username:</label>
+                        <input type="text" name="username" value="{{username}}" id="" class="form-control" placeholder="Username ..." hx-get="{%url 'check_user'%}" hx-trigger="keyup" hx-target="#user-out">
+                        <br>
+                        <div id="user-out">
+
+                        </div>
+                        <br>
+                        <label for="">E-mail:</label>
+                        <input type="text" name="email" value="{{email}}" id="" placeholder="email@email.com" class="form-control" hx-get="{%url 'check_email'%}" hx-trigger="keyup" hx-target="#email-out">
+                        <br>
+                        <div id="email-out">
+
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md">
+                                <label for="">Senha:</label>
+                                <input type="password" name="senha" class="form-control" placeholder="Digite sua senha ...">
+                                
+                            </div>
+                            <div class="col-md">
+                                <label for="">Confirmar senha:</label>
+                                <input type="password" name="confirmar_senha" class="form-control" placeholder="Digite sua senha novamente ..." id="">
+                            </div>
+                        </div>
+                        <br>
+
+                        <input type="submit" value="Cadastrar" class="btn btn-success btn-dark-color">
+                        <a href="{% url 'login' %}" class="btn btn-dark-color-outline">Já possuo uma conta</a>
+                    </form>
+                </div>
+
+            </div>
+            <div class="col-md bg-main d-flex justify-content-center align-items-center">
+                <img src="{% static 'usuarios/img/ilustracao.png' %}" alt="">
+
+
+            </div>
+        </div>
+    </div>
+
+
+{% endblock 'body' %}
+
