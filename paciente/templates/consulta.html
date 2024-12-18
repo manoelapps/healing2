@@ -38,6 +38,10 @@
                             <div class="alert alert-success" role="alert">
                                 Consulta Finalizada
                             </div>
+                        {% elif consulta.status == 'S' %}
+                            <div class="alert alert-success" role="alert">
+                                Obrigado por Avaliar
+                            </div>
                         {% elif consulta.status == 'I' %}
                             <div class="alert alert-primary" role="alert">
                                 Consulta inicializada, acesse o link imediatamente!
